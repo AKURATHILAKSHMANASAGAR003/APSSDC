@@ -1,0 +1,131 @@
+{% extends 'html/base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+{% load static %}
+<div class="none" style="background-color: black;color: grey;">
+  <marquee behavior="scroll" direction="right"
+           onmouseover="this.stop();"
+           onmouseout="this.start();">Toll Free Number :- <a href="tel:1800-324-543">1800-234-534</a></marquee>
+
+  <div class="container">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/slide1.jpg' %}" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color: tomato;">Meeting Hall</h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slide2.jpg' %}" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color: black;">Dinning Hall-1</h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slide3.jpg' %}" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color: grey;">Board Room</h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slide4.jpg' %}" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color: black;">Living Room</h3>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/slide5.jpg' %}" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3 style="color: black;">Dining Hall-2</h3>
+      </div>   
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row mt-2">
+    <div class="card col-md mr-2" style="background-color: black;color: grey;">
+      <h2 class="bg-info text-center text-white p-2 mt-2 border-rounded">Rooms in our Hotel</h2>
+      <div class="card" style="background-color: black;color: grey;">
+        <img class="card-img-top" src="{% static 'images/room1.jpg' %}" alt="Card image" style="width: 45%" height="250px">
+          <div class="card-body">
+            <h4 class="card-title">One Bed</h4>
+            <p class="card-text">10,000 INR per Day</p>
+            <a href="{% url 'rmo' %}" class="btn btn-primary">Book Room</a>
+          </div>
+          <img class="card-img-top" src="{% static 'images/room4.jpg' %}" alt="Card image" style="width: 45%" height="250px">
+          <div class="card-body">
+            <h4 class="card-title">Two Beds</h4>
+            <p class="card-text">15,000 INR per Day</p>
+            <a href="{% url 'rmo' %}" class="btn btn-primary">Book Room</a>
+          </div>
+          <img class="card-img-top" src="{% static 'images/room3.jpg' %}" alt="Card image" style="width: 45%" height="250px">
+          <div class="card-body">
+            <h4 class="card-title">Standard</h4>
+            <p class="card-text">12,000 INR per Day</p>
+            <a href="{% url 'rmo' %}" class="btn btn-primary">Book Room</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<footer class="footer" style="padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5><i class="fa fa-hotel"></i> HOLIDAYINN CO INC.</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'hm' %}">Home</a></li>
+                            <li><a href="{% url 'ab' %}">Benefits</a></li>
+                            <li><a href="{% url 'ct' %}">Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'reg' %}">Register</a></li>
+                            <li><a href="{% url 'lgn' %}">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="https://www.facebook.com/HolidayInn" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://twitter.com/HolidayInn" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.instagram.com/holidayinn/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Thank You</h5>
+                <hr>
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <video width="300" height="200" controls autoplay muted>
+                      <source src="{% static 'images/vedio1.mp4' %}" type="video/mp4">
+                    </video>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

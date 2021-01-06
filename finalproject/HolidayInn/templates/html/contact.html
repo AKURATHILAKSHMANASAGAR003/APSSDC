@@ -1,0 +1,94 @@
+{% extends 'html/base.html' %}
+{% block title %} Info {% endblock %}
+{% block content %}
+{% load static %}
+<div style="background-color: black;color: grey;">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Contact Us</h2>
+      <div class="fakeimg">
+      	<img src="{% static 'images/brand.png' %}" class="img-thumbnail" alt="Cinque Terre" width="500" height="300"> 
+      </div>
+    		<div class="card-body">
+      			<h4 class="card-title">Phone Number</h4>
+      			<p class="card-text"><a href="tel:1800-324-543">1800-324-543</a></p>
+			    <h4 class="card-title">Email ID</h4>
+			    <p class="card-text"><a href="mailto:sunking093@gmail.com">holidayinn@gmail.com</a></p>
+			    <h4 class="card-title">Facebook ID</h4>
+			    <p class="card-text">Holiday INN Hotel</p>
+			    <h4 class="card-title">Instagram ID</h4>
+			    <p class="card-text">holiday_inn</p>
+			    <h4 class="card-title">Twitter ID</h4>
+			    <p class="card-text">holiday_inn_123</p>
+    		</div>
+    </div>
+    <div class="col-sm-8">
+      <h2>About US</h2>
+      <h5>1950s–1970s</h5>
+      <p>Kemmons Wilson, a resident of Memphis, Tennessee, was inspired to build his own motel after being disappointed by poor quality and inconsistent roadside accommodation during a family road trip to Washington, D.C. The name "Holiday Inn" was coined by Wilson's architect Eddie Bluestein as a joke during construction of the first hotel, in reference to the 1942 Christmas-themed, musical film Holiday Inn, starring Bing Crosby and Fred Astaire. Their first hotel/motel opened in August 1952 as "Holiday Inn Hotel Courts" at 4925 Summer Avenue in Memphis, then the main highway to Nashville. In the early 1990s it was demolished, leaving behind a plaque commemorating the site.
+
+	
+
+	
+      <br>
+      <h5>The Great Sign</h5>
+      <div class="fakeimg">
+      	<img src="{% static 'images/logo1.jpg' %}" class="rounded" alt="Cinque Terre" width="150" height="200"> 
+      </div>
+      
+      <p>The "Great Sign" was the roadside sign used by Holiday Inn during its original era of expansion from the 1950s to 1970s. It was perhaps the company's most successful form of advertising. It was extremely large and eye-catching, but was expensive to construct and operate. The manufacturer of the sign was Balton & Sons Sign Company, and it was originally designed by sketch artists Gene Barber and Roland Alexander. Wilson wanted a prominent sign, desiring that it be at least 50 feet (15 m) high and visible in both directions. He also wanted a changeable marquee to welcome different groups. The original sign cost $13,000. It is said that the sign's colors were selected because they were favorites of Wilson's mother. The popularity of the sign led to many imitations, some of which remain to this day.</p>
+
+
+      <br>
+      <h5>1980s–present</h5>
+      <p>Although still a healthy company, changing business conditions and demographics saw Holiday Inn lose its market dominance in the 1980s. Holiday Inns, Inc. was renamed "Holiday Corporation" in 1985 to reflect the growth of the company's brands, including Harrah's Entertainment, Embassy Suites Hotels, Crowne Plaza, Homewood Suites, and Hampton Inn. In 1988, Holiday Corporation was purchased by UK-based Bass PLC (then owners of the Bass beer brand), followed by the remaining domestic Holiday Inn hotels in 1990, when founder Wilson sold his interest, after which the hotel group was known as Holiday Inn Worldwide. The remainder of Holiday Corporation (including the Embassy Suites Hotels, Homewood Suites, and Hampton Inn brands) was spun off to shareholders as Promus Companies Incorporated. In 1990, Bass launched Holiday Inn Express, a complementary brand in the limited service segment.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<footer class="footer" style="padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h5><i class="fa fa-hotel"></i> HOLIDAYINN CO INC.</h5>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'hm' %}">Home</a></li>
+                            <li><a href="{% url 'ab' %}">Benefits</a></li>
+                            <li><a href="{% url 'ct' %}">Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'reg' %}">Register</a></li>
+                            <li><a href="{% url 'lgn' %}">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item"><a href="https://www.facebook.com/HolidayInn" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://twitter.com/HolidayInn" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.instagram.com/holidayinn/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Thank You</h5>
+                <hr>
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <video width="300" height="200" controls autoplay muted>
+                      <source src="{% static 'images/vedio1.mp4' %}" type="video/mp4">
+                    </video>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends 'html/base.html' %}
+{% block title %} Profile {% endblock %}
+{% block content %}
+<div class="container">
+	{% if messages %}
+	{% for k in messages %}
+	<div class="alert alert-{{k.tags}} alert-dismissible mt-3">
+  		<button type="button" class="close" data-dismiss="alert">&times;</button>{{k}}
+	</div>
+	{% endfor %}
+	{% endif %}
+	<div class="row mt-4">
+		<div class="card col-md-3 col-sm-3 mx-2 my-2">
+			<h2 class="bg-info text-center mx-2 my-2 p-2 border corner">Profile</h2>
+			<div class="card-body">
+				<img src="{{user.exfd.impf.url}}" height="200px" width="100%">
+			</div>
+		</div>
+		<div class="card col-md col-sm mx-2 my-2">
+			<h2 class="bg-secondary text-white text-center mx-2 my-2 p-3 border corner">Details</h2>
+			<div class="card-body">
+				<table class="table table-borderless">
+					<tr>
+						<th>First Name</th>
+						<td>{{user.first_name}}</td>
+					</tr>
+					<tr>
+						<th>Last Name</th>
+						<td>{{user.last_name}}</td>
+					</tr>
+					<tr>
+						<th>User Name</th>
+						<td>{{user.username}}</td>
+					</tr>
+					<tr>
+						<th>Age</th>
+						<td>{{user.exfd.age}}</td>
+					</tr>
+					<tr>
+						<th>Gender</th>
+						<td>{{user.exfd.gender}}</td>
+					</tr>
+				</table>
+				<a href="{% url 'upfe' %}" class="btn btn-block btn-success">Update</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="contact" style="padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #292c2f;
+  color: #bbb;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h5><i class="fa fa-hotel"></i> HOLIDAYINN CO INC.</h5>
+                <ul class="nav">
+                	<li class="nav-item"><a href="tel:1800-324-543"  class="nav-link"><i class="fa fa-user fa-lg"></i></a></li>
+                	<li class="nav-item"><a href="mailto : sunking093@gmail.com" class="nav-link"><i class="fa fa-google-plus fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/HolidayInn" class="nav-link pl-0"><i class="fa fa-facebook fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://twitter.com/HolidayInn" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                    <li class="nav-item"><a href="https://www.instagram.com/holidayinn/" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                </ul>
+                <br>
+            </div>
+            <div class="col-md-2">
+                <h5 class="text-md-right">Thank You</h5>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
